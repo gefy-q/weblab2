@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для шапки */
+#page-header {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 5px;
+    font-family: fantasy; /* Шрифт */
+    font-size: 15px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+}
+
+#page-content {
+    padding: 20px;
+    text-align: center;
+}
+
+#main-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 2%; /* Отступ в процентах */
+    margin-bottom: 2%; /* Отступ в процентах */
+    box-sizing: border-box;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table {
+    position: relative;
+    z-index: 1;
+    border: none;
+}
+
+table::after { /* селектор псевдоэлемента after */
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 2px;
+    left: 2px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 5px black;
+    opacity: 0.6;
+}
+
+#data-table th, #data-table td {
+    border: 1px solid #ddd; /* Каскадирование */
+    padding: 8px;
+    text-align: left;
+}
+
+#data-table thead {
+    background-color: #f2f2f2;
+    color: red; /* Наследование */
+}
+
+.buttons {
+    padding-bottom: 2%;
+}
+
+#image-block {
+    display: inline-flex;
+    position: relative;
+}
+
+.dot {
+    position: absolute;
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
